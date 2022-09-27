@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo -n 'Enter search option (--help,--version,--scan): '
-read n
+read option
 APPLICATION_VERSION=$(git --version)
-value=$n
+value=$option
 
-case $n in
+case $option in
 	--help | --h | -help | -h | h )
 		./help.sh
 		;;
@@ -13,6 +13,6 @@ case $n in
 		echo -n "Application version is: $APPLICATION_VERSION"
 		;;
 	--scan)
-		echo "scan"
+		./file_scanner.sh
 		;;
 esac
