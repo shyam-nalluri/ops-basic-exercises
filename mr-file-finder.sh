@@ -2,17 +2,17 @@
 
 echo -n 'Enter search option (--help,--version,--scan): '
 read option
-APPLICATION_VERSION=$(git --version)
-value=$option
+user_option=$option
 
-case $option in
+case $user_option in
 	--help | --h | -help | -h | h )
 		./help.sh
 		;;
 	--version | --v | -v | -version | version | v)
-		echo -n "Application version is: $APPLICATION_VERSION"
+		read version
+		APPLICATION_VERSION=$($version --version)
 		;;
-	--scan)
+	--scan | --s | s | S)
 		./file_scanner.sh
 		;;
 esac
