@@ -23,6 +23,7 @@ pipeline{
             steps {
             
                 echo 'build'
+                sh 'docker build -t shyamnalluri/mr-file0scanner:1.0 . '
              }
         }
         
@@ -31,13 +32,22 @@ pipeline{
             steps {
             
                 echo 'test'
+                sh 'docker run shyamnalluri/mr-file-scanner:1.0'
              }
+        }
+        
+        stage ('login'){
+            steps {
+                echo 'logging in to docker hub'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+            }
         }
         
         stage ('deploy') {
             
             steps {
                 echo 'deploy'
+                sh 'docker push shyamnalluri/mr-file-scanner:1.0'
              }
         }
     }
