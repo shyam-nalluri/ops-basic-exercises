@@ -10,7 +10,7 @@ case $user_option in
 		;;
 	--version | --v | -v | -version | version | v)
 		read version
-		APPLICATION_VERSION=$($version --version)
+		APPLICATION_VERSION=$($docker --version)
 		;;
 	--scan | --s | s | S)
 		./file_scanner.sh
