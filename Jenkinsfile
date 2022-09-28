@@ -23,7 +23,7 @@ pipeline{
             steps {
             
                 echo 'build'
-                sh 'docker build -t shyamnalluri/mr-file0scanner:1.0 . '
+                sh 'docker build -t shyamnalluri/mr-file-scanner:1.0 . '
              }
         }
         
