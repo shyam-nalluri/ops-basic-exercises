@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -n "Enter path you want to scan in the format c:/folder1/folder2: "
-read DIR
+DIR=(/app/files)
 #Scans all files in specified folder or directory
  files=$(ls $DIR | sed 's/^.*\.//' | sort -u)
  
