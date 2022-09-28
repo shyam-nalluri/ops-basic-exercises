@@ -47,7 +47,7 @@ pipeline{
             
             steps {
                 echo 'deploy'
-                sh 'docker push shyamnalluri/mr-file-scanner:1.0'
+                sh 'docker push shyamnalluri/mr-file-scanner'
              }
         }
     }
