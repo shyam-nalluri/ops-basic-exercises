@@ -1,7 +1,8 @@
 #!/bin/bash
-
+echo 'Please select --help to get the instruction on how to use this application'
 echo -n 'Enter search option (--help,--version,--scan): '
 read option
+
 user_option=$option
 
 case $user_option in
