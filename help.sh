@@ -1,4 +1,6 @@
-!/bin/bash
+#!/bin/bash
+
+'''
 # ---------------------------------------------------------------
 #                               HELP                             
 # ---------------------------------------------------------------
@@ -15,3 +17,4 @@
 # This code will first create folders with names txt, shx, pdf and jpg.
 # Once the folders are created then they are moved to the particular folder of their extensions.
 
+'''
