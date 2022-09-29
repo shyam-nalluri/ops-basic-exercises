@@ -10,8 +10,9 @@ case $user_option in
 		./help.sh
 		;;
 	--version | --v | -v | -version | version | v)
-		read version
-		APPLICATION_VERSION=$($docker --version)
+		#read version
+		APPLICATION_VERSION=$(docker --version)
+		echo $APPLICATION_VERSION
 		;;
 	--scan | --s | s | S)
 		./file_scanner.sh
