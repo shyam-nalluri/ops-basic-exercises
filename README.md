@@ -16,3 +16,16 @@ This code is used to sort the files and copy them to the folder based on the ext
 # For eg: If you folder with file extensions .txt, .sh, .pdf, .jpg 
 # This code will first create folders with names txt, shx, pdf and jpg.
 # Once the folders are created then they are moved to the particular folder of their extensions.
+
+# Build instructions
+
+```bash
+docker build -t shyam-app .
+```
+
+# Run instructions
+
+```bash
+docker run -it -v FOLDER_TO_SCAN:/data shyam-app
+docker run -it -v "$(pwd -W)/files":/data shyam-app
+```
