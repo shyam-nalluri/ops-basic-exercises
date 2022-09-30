@@ -3,13 +3,13 @@ This code is used to sort the files and copy them to the folder based on the ext
 
 # Options
 
-* option --help
+* **--help**
   help option will display the instructons on how to use this application
 
-* option --version
+* **--version**
   version option will print the version of the docker images
 
-* option --scan
+* **--scan**
   scan option will scan the files in the foder and sort them out by creating new folder based on the file extension.
 
 # Once the folder is craeted all the related files are moved to that folder.
